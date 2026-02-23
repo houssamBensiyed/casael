@@ -1,0 +1,211 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that true is true                 0.05s  
+
+   PASS  Tests\Feature\AdminMiddlewareTest
+  Γ£ô admin user can access admin-protΓÇª 0.93s  
+  Γ£ô regular user gets 403 on admin-pΓÇª 0.06s  
+  Γ£ô guest user is redirected to logiΓÇª 0.03s  
+  Γ£ô admin who is also banned gets blΓÇª 0.04s  
+
+   PASS  Tests\Feature\AdminTest
+  Γ£ô admin can access dashboard        0.63s  
+  Γ£ô regular user cannot access adminΓÇª 0.07s  
+  Γ£ô guest cannot access admin dashboΓÇª 0.04s  
+  Γ£ô dashboard shows correct stats     0.10s  
+  Γ£ô admin can ban a user              0.06s  
+  Γ£ô admin cannot ban themselves       0.07s  
+  Γ£ô admin cannot ban another admin    0.06s  
+  Γ£ô regular user cannot ban anyone    0.06s  
+  Γ£ô admin can unban a user            0.06s  
+  Γ£ô regular user cannot unban anyone  0.07s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screen can be rendered      0.12s  
+  Γ£ô users can authenticate using theΓÇª 0.19s  
+  Γ£ô users can not authenticate withΓÇª  0.32s  
+  Γ£ô users can logout                  0.08s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email verification screen can beΓÇª 0.11s  
+  Γ£ô email can be verified             0.11s  
+  Γ£ô email is not verified with invalΓÇª 0.09s  
+
+   PASS  Tests\Feature\Auth\LoginTest
+  Γ£ô login page is accessible          0.09s  
+  Γ£ô user can login with correct credΓÇª 0.08s  
+  Γ£ô user cannot login with wrong pasΓÇª 0.31s  
+  Γ£ô banned user cannot login          0.09s  
+  Γ£ô authenticated user can access daΓÇª 0.10s  
+  Γ£ô guest cannot access dashboard     0.06s  
+  Γ£ô user can logout                   0.04s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm password screen can be rΓÇª 0.08s  
+  Γ£ô password can be confirmed         0.08s  
+  Γ£ô password is not confirmed with iΓÇª 0.30s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset password link screen can bΓÇª 0.09s  
+  Γ£ô reset password link can be requeΓÇª 0.32s  
+  Γ£ô reset password screen can be renΓÇª 0.32s  
+  Γ£ô password can be reset with validΓÇª 0.35s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password can be updated           0.13s  
+  Γ£ô correct password must be provideΓÇª 0.09s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration page is accessible   0.11s  
+  Γ£ô a new user can register           0.12s  
+  Γ£ô first registered user is auto-prΓÇª 0.08s  
+  Γ£ô second registered user is NOT prΓÇª 0.09s  
+  Γ£ô registration fails with invalidΓÇª  0.10s  
+  Γ£ô registration fails with duplicatΓÇª 0.08s  
+
+   PASS  Tests\Feature\BannedMiddlewareTest
+  Γ£ô non-banned user can access autheΓÇª 0.11s  
+  Γ£ô banned user is logged out and reΓÇª 0.07s  
+  Γ£ô banned user sees error message oΓÇª 0.08s  
+  Γ£ô banned user cannot access profilΓÇª 0.07s  
+  Γ£ô banned user session is invalidatΓÇª 0.07s  
+  Γ£ô login page is still accessible fΓÇª 0.08s  
+
+   PASS  Tests\Feature\CategoryTest
+  Γ£ô active member can create categorΓÇª 0.16s  
+  Γ£ô non-member cannot create categorΓÇª 0.23s  
+  Γ£ô cannot create category on cancelΓÇª 0.11s  
+  Γ£ô active member can update categorΓÇª 0.10s  
+  Γ£ô non-member cannot update categorΓÇª 0.14s  
+  Γ£ô owner can delete category         0.09s  
+  Γ£ô member cannot delete category     0.08s  
+
+   PASS  Tests\Feature\ColocationTest
+  Γ£ô guest is redirected to login onΓÇª  0.09s  
+  Γ£ô user sees their colocations on iΓÇª 0.10s  
+  Γ£ô authenticated user can view creaΓÇª 0.09s  
+  Γ£ô user with active colocation is rΓÇª 0.08s  
+  Γ£ô user can create colocation and iΓÇª 0.09s  
+  Γ£ô user with active colocation cannΓÇª 0.07s  
+  Γ£ô store validation requires name    0.07s  
+  Γ£ô member can view colocation        0.12s  
+  Γ£ô non-member cannot view colocatioΓÇª 0.08s  
+  Γ£ô owner can view edit form          0.10s  
+  Γ£ô non-owner cannot view edit form   0.08s  
+  Γ£ô owner can update colocation nameΓÇª 0.07s  
+  Γ£ô non-owner cannot update colocatiΓÇª 0.08s  
+  Γ£ô owner can cancel colocation       0.11s  
+  Γ£ô non-owner cannot cancel colocatiΓÇª 0.08s  
+  Γ£ô already cancelled colocation canΓÇª 0.10s  
+  Γ£ô member can leave colocation       0.07s  
+  Γ£ô owner cannot leave colocation     0.07s  
+  Γ£ô non-member cannot leave colocatiΓÇª 0.08s  
+  Γ£ô owner can remove a member         0.08s  
+  Γ£ô owner cannot remove themselves    0.07s  
+  Γ£ô non-owner cannot remove members   0.19s  
+  Γ£ô cannot remove member from cancelΓÇª 0.06s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô it returns a successful response  0.11s  
+
+   PASS  Tests\Feature\ExpenseTest
+  Γ£ô active member can create expense  0.08s  
+  Γ£ô expense can be created without cΓÇª 0.10s  
+  Γ£ô non-member cannot create expense  0.08s  
+  Γ£ô cannot create expense on cancellΓÇª 0.08s  
+  Γ£ô cannot use category from anotherΓÇª 0.09s  
+  Γ£ô validation rejects invalid amounΓÇª 0.13s  
+  Γ£ô payer can update their expense    0.10s  
+  Γ£ô owner can update any expense      0.08s  
+  Γ£ô other member cannot update expenΓÇª 0.10s  
+  Γ£ô payer can delete their expense    0.09s  
+  Γ£ô owner can delete any expense      0.07s  
+  Γ£ô other member cannot delete expenΓÇª 0.09s  
+
+   PASS  Tests\Feature\InvitationTest
+  Γ£ô owner can send invitation         0.14s  
+  Γ£ô non-owner cannot send invitation  0.07s  
+  Γ£ô cannot send invitation to existiΓÇª 0.12s  
+  Γ£ô cannot send invitation to user wΓÇª 0.07s  
+  Γ£ô cannot send duplicate pending inΓÇª 0.07s  
+  Γ£ô cannot send invitation on cancelΓÇª 0.06s  
+  Γ£ô user can accept invitation        0.08s  
+  Γ£ô user cannot accept invitation meΓÇª 0.08s  
+  Γ£ô user with active colocation cannΓÇª 0.08s  
+  Γ£ô cannot accept invitation for canΓÇª 0.07s  
+  Γ£ô user can refuse invitation        0.08s  
+  Γ£ô user cannot refuse invitation meΓÇª 0.07s  
+  Γ£ô owner can cancel pending invitatΓÇª 0.08s  
+  Γ£ô non-owner cannot cancel invitatiΓÇª 0.08s  
+  Γ£ô owner cannot cancel already acceΓÇª 0.08s  
+
+   PASS  Tests\Feature\ModelRelationshipTest
+  Γ£ô colocation belongs to an owner    0.09s  
+  Γ£ô colocation has many members throΓÇª 0.09s  
+  Γ£ô colocation activeMembers excludeΓÇª 0.08s  
+  Γ£ô colocation has many invitations   0.06s  
+  Γ£ô colocation has many categories    0.07s  
+  Γ£ô colocation has many expenses      0.09s  
+  Γ£ô colocation has many settlements   0.12s  
+  Γ£ô colocation active scope filtersΓÇª  0.04s  
+  Γ£ô invitation belongs to colocation  0.07s  
+  Γ£ô category belongs to colocation    0.09s  
+  Γ£ô category has many expenses        0.08s  
+  Γ£ô expense belongs to payer          0.07s  
+  Γ£ô expense belongs to colocation anΓÇª 0.07s  
+  Γ£ô expense casts amount as decimalΓÇª  0.08s  
+  Γ£ô settlement belongs to fromUser aΓÇª 0.07s  
+  Γ£ô settlement casts is_paid as boolΓÇª 0.04s  
+  Γ£ô user has active colocation returΓÇª 0.05s  
+  Γ£ô user colocations returns all memΓÇª 0.07s  
+  Γ£ô user expenses returns expenses pΓÇª 0.07s  
+  Γ£ô user isOwnerOf returns true forΓÇª  0.06s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile page is displayed         0.19s  
+  Γ£ô profile information can be updatΓÇª 0.10s  
+  Γ£ô email verification status is uncΓÇª 0.08s  
+  Γ£ô user can delete their account     0.07s  
+  Γ£ô correct password must be provideΓÇª 0.07s  
+
+   PASS  Tests\Feature\ReputationTest
+  Γ£ô member leaving without debt gainΓÇª 0.10s  
+  Γ£ô member leaving with unpaid debtΓÇª  0.08s  
+  Γ£ô removed member without debt gainΓÇª 0.08s  
+  Γ£ô removed member with unpaid debtΓÇª  0.08s  
+  Γ£ô owner cancelling without any debΓÇª 0.08s  
+  Γ£ô owner cancelling with own unpaidΓÇª 0.09s  
+  Γ£ô paid settlements do not count asΓÇª 0.11s  
+  Γ£ô reputation accumulates over multΓÇª 0.11s  
+
+   PASS  Tests\Feature\SettlementTest
+  Γ£ô balance service returns empty foΓÇª 0.12s  
+  Γ£ô balance service calculates equalΓÇª 0.08s  
+  Γ£ô balance service calculates unequΓÇª 0.06s  
+  Γ£ô balance service generates correcΓÇª 0.08s  
+  Γ£ô balance service handles 3 memberΓÇª 0.10s  
+  Γ£ô balance service returns no settlΓÇª 0.09s  
+  Γ£ô active member can view settlemenΓÇª 0.15s  
+  Γ£ô non-member cannot view settlemenΓÇª 0.09s  
+  Γ£ô owner can generate settlements    0.09s  
+  Γ£ô non-owner cannot generate settleΓÇª 0.08s  
+  Γ£ô generate replaces old unpaid setΓÇª 0.10s  
+  Γ£ô creditor can mark settlement asΓÇª  0.11s  
+  Γ£ô debtor cannot mark settlement asΓÇª 0.09s  
+  Γ£ô already paid settlement cannot bΓÇª 0.15s  
+  Γ£ô cannot generate settlements on cΓÇª 0.09s  
+
+   PASS  Tests\Feature\UserModelTest
+  Γ£ô user has default role of user     0.17s  
+  Γ£ô user has default reputation of 0  0.07s  
+  Γ£ô user is not banned by default     0.06s  
+  Γ£ô isAdmin returns true for admin uΓÇª 0.05s  
+  Γ£ô isAdmin returns false for regulaΓÇª 0.05s  
+  Γ£ô isBanned returns true when userΓÇª  0.10s  
+  Γ£ô isBanned returns false when userΓÇª 0.06s  
+  Γ£ô reputation can be incremented     0.08s  
+  Γ£ô reputation can be decremented     0.09s  
+
+  Tests:    165 passed (383 assertions)
+  Duration: 18.01s
+

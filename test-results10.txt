@@ -1,0 +1,199 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that true is true                                            0.04s  
+
+   PASS  Tests\Feature\AdminMiddlewareTest
+  Γ£ô admin user can access admin-protected routes                 0.91s  
+  Γ£ô regular user gets 403 on admin-protected routes              0.09s  
+  Γ£ô guest user is redirected to login on admin-protected routes  0.05s  
+  Γ£ô admin who is also banned gets blocked by banned middlewareΓÇª  0.07s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screen can be rendered                                 0.08s  
+  Γ£ô users can authenticate using the login screen                0.13s  
+  Γ£ô users can not authenticate with invalid password             0.27s  
+  Γ£ô users can logout                                             0.05s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email verification screen can be rendered                    0.03s  
+  Γ£ô email can be verified                                        0.06s  
+  Γ£ô email is not verified with invalid hash                      0.05s  
+
+   PASS  Tests\Feature\Auth\LoginTest
+  Γ£ô login page is accessible                                     0.09s  
+  Γ£ô user can login with correct credentials                      0.05s  
+  Γ£ô user cannot login with wrong password                        0.28s  
+  Γ£ô banned user cannot login                                     0.05s  
+  Γ£ô authenticated user can access dashboard                      0.03s  
+  Γ£ô guest cannot access dashboard                                0.05s  
+  Γ£ô user can logout                                              0.05s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm password screen can be rendered                      0.07s  
+  Γ£ô password can be confirmed                                    0.04s  
+  Γ£ô password is not confirmed with invalid password              0.24s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset password link screen can be rendered                   0.06s  
+  Γ£ô reset password link can be requested                         0.24s  
+  Γ£ô reset password screen can be rendered                        0.28s  
+  Γ£ô password can be reset with valid token                       0.29s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password can be updated                                      0.06s  
+  Γ£ô correct password must be provided to update password         0.03s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration page is accessible                              0.05s  
+  Γ£ô a new user can register                                      0.04s  
+  Γ£ô first registered user is auto-promoted to admin              0.03s  
+  Γ£ô second registered user is NOT promoted to admin              0.06s  
+  Γ£ô registration fails with invalid data                         0.05s  
+  Γ£ô registration fails with duplicate email                      0.05s  
+
+   PASS  Tests\Feature\BannedMiddlewareTest
+  Γ£ô non-banned user can access authenticated routes              0.05s  
+  Γ£ô banned user is logged out and redirected to login            0.03s  
+  Γ£ô banned user sees error message on redirect                   0.03s  
+  Γ£ô banned user cannot access profile page                       0.03s  
+  Γ£ô banned user session is invalidated                           0.03s  
+  Γ£ô login page is still accessible for banned user (guest routeΓÇª 0.03s  
+
+   PASS  Tests\Feature\CategoryTest
+  Γ£ô active member can create category                            0.06s  
+  Γ£ô non-member cannot create category                            0.04s  
+  Γ£ô cannot create category on cancelled colocation               0.05s  
+  Γ£ô active member can update category                            0.06s  
+  Γ£ô non-member cannot update category                            0.07s  
+  Γ£ô owner can delete category                                    0.07s  
+  Γ£ô member cannot delete category                                0.07s  
+
+   PASS  Tests\Feature\ColocationTest
+  Γ£ô guest is redirected to login on colocation index             0.04s  
+  Γ£ô user sees their colocations on index                         0.06s  
+  Γ£ô authenticated user can view create form                      0.07s  
+  Γ£ô user with active colocation is redirected from create form   0.08s  
+  Γ£ô user can create colocation and is auto-added as owner        0.05s  
+  Γ£ô user with active colocation cannot create another            0.04s  
+  Γ£ô store validation requires name                               0.04s  
+  Γ£ô member can view colocation                                   0.05s  
+  Γ£ô non-member cannot view colocation                            0.05s  
+  Γ£ô owner can view edit form                                     0.03s  
+  Γ£ô non-owner cannot view edit form                              0.03s  
+  Γ£ô owner can update colocation name and description             0.02s  
+  Γ£ô non-owner cannot update colocation                           0.03s  
+  Γ£ô owner can cancel colocation                                  0.05s  
+  Γ£ô non-owner cannot cancel colocation                           0.05s  
+  Γ£ô already cancelled colocation cannot be cancelled again       0.06s  
+  Γ£ô member can leave colocation                                  0.07s  
+  Γ£ô owner cannot leave colocation                                0.07s  
+  Γ£ô non-member cannot leave colocation                           0.07s  
+  Γ£ô owner can remove a member                                    0.07s  
+  Γ£ô owner cannot remove themselves                               0.06s  
+  Γ£ô non-owner cannot remove members                              0.06s  
+  Γ£ô cannot remove member from cancelled colocation               0.07s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô it returns a successful response                             0.10s  
+
+   PASS  Tests\Feature\ExpenseTest
+  Γ£ô active member can create expense                             0.10s  
+  Γ£ô expense can be created without category                      0.07s  
+  Γ£ô non-member cannot create expense                             0.08s  
+  Γ£ô cannot create expense on cancelled colocation                0.07s  
+  Γ£ô cannot use category from another colocation                  0.06s  
+  Γ£ô validation rejects invalid amount                            0.03s  
+  Γ£ô payer can update their expense                               0.04s  
+  Γ£ô owner can update any expense                                 0.12s  
+  Γ£ô other member cannot update expense                           0.05s  
+  Γ£ô payer can delete their expense                               0.03s  
+  Γ£ô owner can delete any expense                                 0.04s  
+  Γ£ô other member cannot delete expense                           0.06s  
+
+   PASS  Tests\Feature\InvitationTest
+  Γ£ô owner can send invitation                                    0.09s  
+  Γ£ô non-owner cannot send invitation                             0.07s  
+  Γ£ô cannot send invitation to existing active member             0.05s  
+  Γ£ô cannot send invitation to user with active colocation        0.07s  
+  Γ£ô cannot send duplicate pending invitation                     0.05s  
+  Γ£ô cannot send invitation on cancelled colocation               0.05s  
+  Γ£ô user can accept invitation                                   0.03s  
+  Γ£ô user cannot accept invitation meant for another email        0.03s  
+  Γ£ô user with active colocation cannot accept invitation         0.03s  
+  Γ£ô cannot accept invitation for cancelled colocation            0.03s  
+  Γ£ô user can refuse invitation                                   0.05s  
+  Γ£ô user cannot refuse invitation meant for another email        0.04s  
+  Γ£ô owner can cancel pending invitation                          0.03s  
+  Γ£ô non-owner cannot cancel invitation                           0.04s  
+  Γ£ô owner cannot cancel already accepted invitation              0.04s  
+
+   PASS  Tests\Feature\ModelRelationshipTest
+  Γ£ô colocation belongs to an owner                               0.06s  
+  Γ£ô colocation has many members through pivot                    0.06s  
+  Γ£ô colocation activeMembers excludes users with left_at set     0.08s  
+  Γ£ô colocation has many invitations                              0.05s  
+  Γ£ô colocation has many categories                               0.05s  
+  Γ£ô colocation has many expenses                                 0.06s  
+  Γ£ô colocation has many settlements                              0.07s  
+  Γ£ô colocation active scope filters correctly                    0.04s  
+  Γ£ô invitation belongs to colocation                             0.02s  
+  Γ£ô category belongs to colocation                               0.03s  
+  Γ£ô category has many expenses                                   0.02s  
+  Γ£ô expense belongs to payer                                     0.02s  
+  Γ£ô expense belongs to colocation and category                   0.02s  
+  Γ£ô expense casts amount as decimal and date as date             0.02s  
+  Γ£ô settlement belongs to fromUser and toUser                    0.02s  
+  Γ£ô settlement casts is_paid as boolean                          0.05s  
+  Γ£ô user has active colocation returns correct result            0.05s  
+  Γ£ô user colocations returns all memberships                     0.06s  
+  Γ£ô user expenses returns expenses paid by user                  0.04s  
+  Γ£ô user isOwnerOf returns true for owned colocations            0.04s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile page is displayed                                    0.08s  
+  Γ£ô profile information can be updated                           0.06s  
+  Γ£ô email verification status is unchanged when the email addreΓÇª 0.03s  
+  Γ£ô user can delete their account                                0.05s  
+  Γ£ô correct password must be provided to delete account          0.05s  
+
+   PASS  Tests\Feature\ReputationTest
+  Γ£ô member leaving without debt gains +1 reputation              0.06s  
+  Γ£ô member leaving with unpaid debt loses -1 reputation          0.03s  
+  Γ£ô removed member without debt gains +1 reputation              0.05s  
+  Γ£ô removed member with unpaid debt loses -1 reputation          0.03s  
+  Γ£ô owner cancelling without any debt gains +1 reputation        0.02s  
+  Γ£ô owner cancelling with own unpaid debt loses -1 reputation    0.03s  
+  Γ£ô paid settlements do not count as debt                        0.03s  
+  Γ£ô reputation accumulates over multiple departures              0.03s  
+
+   PASS  Tests\Feature\SettlementTest
+  Γ£ô balance service returns empty for no members                 0.03s  
+  Γ£ô balance service calculates equal expenses correctly          0.02s  
+  Γ£ô balance service calculates unequal expenses correctly        0.02s  
+  Γ£ô balance service generates correct settlements                0.02s  
+  Γ£ô balance service handles 3 members correctly                  0.02s  
+  Γ£ô balance service returns no settlements when balanced         0.02s  
+  Γ£ô active member can view settlements page                      0.03s  
+  Γ£ô non-member cannot view settlements page                      0.02s  
+  Γ£ô owner can generate settlements                               0.02s  
+  Γ£ô non-owner cannot generate settlements                        0.03s  
+  Γ£ô generate replaces old unpaid settlements                     0.04s  
+  Γ£ô creditor can mark settlement as paid                         0.05s  
+  Γ£ô debtor cannot mark settlement as paid                        0.04s  
+  Γ£ô already paid settlement cannot be marked again               0.04s  
+  Γ£ô cannot generate settlements on cancelled colocation          0.03s  
+
+   PASS  Tests\Feature\UserModelTest
+  Γ£ô user has default role of user                                0.04s  
+  Γ£ô user has default reputation of 0                             0.02s  
+  Γ£ô user is not banned by default                                0.02s  
+  Γ£ô isAdmin returns true for admin users                         0.02s  
+  Γ£ô isAdmin returns false for regular users                      0.03s  
+  Γ£ô isBanned returns true when user is banned                    0.04s  
+  Γ£ô isBanned returns false when user is not banned               0.05s  
+  Γ£ô reputation can be incremented                                0.04s  
+  Γ£ô reputation can be decremented                                0.04s  
+
+  Tests:    155 passed (357 assertions)
+  Duration: 10.12s
+

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ColocationController;
 use App\Http\Controllers\ExpenseController;
@@ -46,6 +47,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/colocations/{colocation}/settlements', [SettlementController::class, 'index'])->name('settlements.index');
     Route::post('/colocations/{colocation}/settlements/generate', [SettlementController::class, 'generate'])->name('settlements.generate');
     Route::patch('/settlements/{settlement}/paid', [SettlementController::class, 'markPaid'])->name('settlements.markPaid');
+});
+
+// Admin routes
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::patch('/users/{user}/ban', [AdminController::class, 'ban'])->name('admin.ban');
+    Route::patch('/users/{user}/unban', [AdminController::class, 'unban'])->name('admin.unban');
 });
 
 require __DIR__.'/auth.php';
