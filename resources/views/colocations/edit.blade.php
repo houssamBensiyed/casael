@@ -1,27 +1,41 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Modifier la colocation
+            Modifier — {{ $colocation->name }}
         </h2>
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <form method="POST" action="{{ route('colocations.update', $colocation) }}">
-                @csrf
-                @method('PUT')
-                <div class="mb-4">
-                    <label for="name">Nom</label>
-                    <input type="text" name="name" id="name" value="{{ old('name', $colocation->name) }}" required class="border rounded p-2 w-full">
-                    @error('name') <span class="text-red-500">{{ $message }}</span> @enderror
+        <div class="max-w-2xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6">
+                    <form method="POST" action="{{ route('colocations.update', $colocation) }}">
+                        @csrf
+                        @method('PUT')
+
+                        <div class="mb-4">
+                            <x-input-label for="name" value="Nom de la colocation" />
+                            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full"
+                                          :value="old('name', $colocation->name)" required autofocus />
+                            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                        </div>
+
+                        <div class="mb-6">
+                            <x-input-label for="description" value="Description (optionnel)" />
+                            <textarea id="description" name="description" rows="3"
+                                      class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500">{{ old('description', $colocation->description) }}</textarea>
+                            <x-input-error :messages="$errors->get('description')" class="mt-2" />
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <x-primary-button>Enregistrer</x-primary-button>
+                            <a href="{{ route('colocations.show', $colocation) }}" class="text-sm text-gray-600 hover:text-gray-900 underline">
+                                Annuler
+                            </a>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-4">
-                    <label for="description">Description</label>
-                    <textarea name="description" id="description" class="border rounded p-2 w-full">{{ old('description', $colocation->description) }}</textarea>
-                    @error('description') <span class="text-red-500">{{ $message }}</span> @enderror
-                </div>
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Enregistrer</button>
-            </form>
+            </div>
         </div>
     </div>
 </x-app-layout>
