@@ -1,0 +1,107 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that true is true                 0.02s  
+
+   PASS  Tests\Feature\AdminMiddlewareTest
+  Γ£ô admin user can access admin-protΓÇª 0.48s  
+  Γ£ô regular user gets 403 on admin-pΓÇª 0.04s  
+  Γ£ô guest user is redirected to logiΓÇª 0.02s  
+  Γ£ô admin who is also banned gets blΓÇª 0.03s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screen can be rendered      0.04s  
+  Γ£ô users can authenticate using theΓÇª 0.06s  
+  Γ£ô users can not authenticate withΓÇª  0.23s  
+  Γ£ô users can logout                  0.05s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email verification screen can beΓÇª 0.03s  
+  Γ£ô email can be verified             0.03s  
+  Γ£ô email is not verified with invalΓÇª 0.03s  
+
+   PASS  Tests\Feature\Auth\LoginTest
+  Γ£ô login page is accessible          0.03s  
+  Γ£ô user can login with correct credΓÇª 0.03s  
+  Γ£ô user cannot login with wrong pasΓÇª 0.23s  
+  Γ£ô banned user cannot login          0.05s  
+  Γ£ô authenticated user can access daΓÇª 0.04s  
+  Γ£ô guest cannot access dashboard     0.03s  
+  Γ£ô user can logout                   0.05s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm password screen can be rΓÇª 0.06s  
+  Γ£ô password can be confirmed         0.03s  
+  Γ£ô password is not confirmed with iΓÇª 0.24s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset password link screen can bΓÇª 0.05s  
+  Γ£ô reset password link can be requeΓÇª 0.24s  
+  Γ£ô reset password screen can be renΓÇª 0.27s  
+  Γ£ô password can be reset with validΓÇª 0.28s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password can be updated           0.03s  
+  Γ£ô correct password must be provideΓÇª 0.03s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration page is accessible   0.03s  
+  Γ£ô a new user can register           0.05s  
+  Γ£ô first registered user is auto-prΓÇª 0.03s  
+  Γ£ô second registered user is NOT prΓÇª 0.03s  
+  Γ£ô registration fails with invalidΓÇª  0.03s  
+  Γ£ô registration fails with duplicatΓÇª 0.02s  
+
+   PASS  Tests\Feature\BannedMiddlewareTest
+  Γ£ô non-banned user can access autheΓÇª 0.03s  
+  Γ£ô banned user is logged out and reΓÇª 0.03s  
+  Γ£ô banned user sees error message oΓÇª 0.02s  
+  Γ£ô banned user cannot access profilΓÇª 0.03s  
+  Γ£ô banned user session is invalidatΓÇª 0.02s  
+  Γ£ô login page is still accessible fΓÇª 0.02s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô it returns a successful response  0.03s  
+
+   PASS  Tests\Feature\ModelRelationshipTest
+  Γ£ô colocation belongs to an owner    0.04s  
+  Γ£ô colocation has many members throΓÇª 0.04s  
+  Γ£ô colocation activeMembers excludeΓÇª 0.02s  
+  Γ£ô colocation has many invitations   0.02s  
+  Γ£ô colocation has many categories    0.02s  
+  Γ£ô colocation has many expenses      0.03s  
+  Γ£ô colocation has many settlements   0.02s  
+  Γ£ô colocation active scope filtersΓÇª  0.02s  
+  Γ£ô invitation belongs to colocation  0.02s  
+  Γ£ô category belongs to colocation    0.02s  
+  Γ£ô category has many expenses        0.03s  
+  Γ£ô expense belongs to payer          0.03s  
+  Γ£ô expense belongs to colocation anΓÇª 0.04s  
+  Γ£ô expense casts amount as decimalΓÇª  0.07s  
+  Γ£ô settlement belongs to fromUser aΓÇª 0.05s  
+  Γ£ô settlement casts is_paid as boolΓÇª 0.04s  
+  Γ£ô user has active colocation returΓÇª 0.02s  
+  Γ£ô user colocations returns all memΓÇª 0.02s  
+  Γ£ô user expenses returns expenses pΓÇª 0.03s  
+  Γ£ô user isOwnerOf returns true forΓÇª  0.04s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile page is displayed         0.08s  
+  Γ£ô profile information can be updatΓÇª 0.03s  
+  Γ£ô email verification status is uncΓÇª 0.03s  
+  Γ£ô user can delete their account     0.04s  
+  Γ£ô correct password must be provideΓÇª 0.04s  
+
+   PASS  Tests\Feature\UserModelTest
+  Γ£ô user has default role of user     0.02s  
+  Γ£ô user has default reputation of 0  0.02s  
+  Γ£ô user is not banned by default     0.02s  
+  Γ£ô isAdmin returns true for admin uΓÇª 0.02s  
+  Γ£ô isAdmin returns false for regulaΓÇª 0.03s  
+  Γ£ô isBanned returns true when userΓÇª  0.02s  
+  Γ£ô isBanned returns false when userΓÇª 0.02s  
+  Γ£ô reputation can be incremented     0.02s  
+  Γ£ô reputation can be decremented     0.02s  
+
+  Tests:    75 passed (152 assertions)
+  Duration: 4.53s
+
