@@ -126,3 +126,64 @@
   Γ£ô owner can cancel pending invitation                          0.06s  
   Γ£ô non-owner cannot cancel invitation                           0.06s  
   Γ£ô owner cannot cancel already accepted invitation              0.04s  
+
+   PASS  Tests\Feature\ModelRelationshipTest
+  Γ£ô colocation belongs to an owner                               0.04s  
+  Γ£ô colocation has many members through pivot                    0.05s  
+  Γ£ô colocation activeMembers excludes users with left_at set     0.06s  
+  Γ£ô colocation has many invitations                              0.04s  
+  Γ£ô colocation has many categories                               0.03s  
+  Γ£ô colocation has many expenses                                 0.03s  
+  Γ£ô colocation has many settlements                              0.03s  
+  Γ£ô colocation active scope filters correctly                    0.02s  
+  Γ£ô invitation belongs to colocation                             0.04s  
+  Γ£ô category belongs to colocation                               0.04s  
+  Γ£ô category has many expenses                                   0.06s  
+  Γ£ô expense belongs to payer                                     0.07s  
+  Γ£ô expense belongs to colocation and category                   0.05s  
+  Γ£ô expense casts amount as decimal and date as date             0.05s  
+  Γ£ô settlement belongs to fromUser and toUser                    0.06s  
+  Γ£ô settlement casts is_paid as boolean                          0.05s  
+  Γ£ô user has active colocation returns correct result            0.04s  
+  Γ£ô user colocations returns all memberships                     0.04s  
+  Γ£ô user expenses returns expenses paid by user                  0.04s  
+  Γ£ô user isOwnerOf returns true for owned colocations            0.04s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile page is displayed                                    0.10s  
+  Γ£ô profile information can be updated                           0.03s  
+  Γ£ô email verification status is unchanged when the email addreΓÇª 0.04s  
+  Γ£ô user can delete their account                                0.04s  
+  Γ£ô correct password must be provided to delete account          0.04s  
+
+   PASS  Tests\Feature\SettlementTest
+  Γ£ô balance service returns empty for no members                 0.07s  
+  Γ£ô balance service calculates equal expenses correctly          0.05s  
+  Γ£ô balance service calculates unequal expenses correctly        0.08s  
+  Γ£ô balance service generates correct settlements                0.04s  
+  Γ£ô balance service handles 3 members correctly                  0.04s  
+  Γ£ô balance service returns no settlements when balanced         0.04s  
+  Γ£ô active member can view settlements page                      0.78s  
+  Γ£ô non-member cannot view settlements page                      0.09s  
+  Γ£ô owner can generate settlements                               0.08s  
+  Γ£ô non-owner cannot generate settlements                        0.05s  
+  Γ£ô generate replaces old unpaid settlements                     0.04s  
+  Γ£ô creditor can mark settlement as paid                         0.03s  
+  Γ£ô debtor cannot mark settlement as paid                        0.03s  
+  Γ£ô already paid settlement cannot be marked again               0.04s  
+  Γ£ô cannot generate settlements on cancelled colocation          0.03s  
+
+   PASS  Tests\Feature\UserModelTest
+  Γ£ô user has default role of user                                0.05s  
+  Γ£ô user has default reputation of 0                             0.03s  
+  Γ£ô user is not banned by default                                0.03s  
+  Γ£ô isAdmin returns true for admin users                         0.03s  
+  Γ£ô isAdmin returns false for regular users                      0.04s  
+  Γ£ô isBanned returns true when user is banned                    0.04s  
+  Γ£ô isBanned returns false when user is not banned               0.05s  
+  Γ£ô reputation can be incremented                                0.03s  
+  Γ£ô reputation can be decremented                                0.02s  
+
+  Tests:    147 passed (348 assertions)
+  Duration: 11.22s
+

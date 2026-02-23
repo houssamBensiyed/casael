@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Colocation;
 use App\Models\User;
+use App\Services\ReputationService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
@@ -11,6 +12,9 @@ use Illuminate\View\View;
 
 class ColocationController extends Controller
 {
+    public function __construct(
+        protected ReputationService $reputationService
+    ) {}
     /**
      * Display a listing of the user's colocations.
      */
@@ -112,6 +116,9 @@ class ColocationController extends Controller
     {
         Gate::authorize('delete', $colocation);
 
+        // Adjust owner reputation before cancelling
+        $this->reputationService->adjustForDeparture($colocation->owner, $colocation);
+
         // Set status to cancelled
         $colocation->update(['status' => 'cancelled']);
 
@@ -134,6 +141,9 @@ class ColocationController extends Controller
         Gate::authorize('leave', $colocation);
 
         $user = auth()->user();
+
+        // Adjust reputation before leaving
+        $this->reputationService->adjustForDeparture($user, $colocation);
 
         // Set left_at on the pivot
         $colocation->members()->updateExistingPivot($user->id, [
@@ -162,6 +172,9 @@ class ColocationController extends Controller
             return redirect()->route('colocations.show', $colocation)
                 ->with('error', 'Cet utilisateur n\'est pas un membre actif.');
         }
+
+        // Adjust removed member's reputation
+        $this->reputationService->adjustForDeparture($user, $colocation);
 
         // Set left_at on the pivot
         $colocation->members()->updateExistingPivot($user->id, [
