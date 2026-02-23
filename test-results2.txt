@@ -1,0 +1,85 @@
+﻿
+   PASS  Tests\Unit\ExampleTest
+  Γ£ô that true is true                       0.04s  
+
+   PASS  Tests\Feature\AdminMiddlewareTest
+  Γ£ô admin user can access admin-protectedΓÇª  0.75s  
+  Γ£ô regular user gets 403 on admin-protectΓÇª 0.07s  
+  Γ£ô guest user is redirected to login on aΓÇª 0.04s  
+  Γ£ô admin who is also banned gets blockedΓÇª  0.06s  
+
+   PASS  Tests\Feature\Auth\AuthenticationTest
+  Γ£ô login screen can be rendered            0.08s  
+  Γ£ô users can authenticate using the loginΓÇª 0.11s  
+  Γ£ô users can not authenticate with invaliΓÇª 0.24s  
+  Γ£ô users can logout                        0.05s  
+
+   PASS  Tests\Feature\Auth\EmailVerificationTest
+  Γ£ô email verification screen can be rendeΓÇª 1.06s  
+  Γ£ô email can be verified                   0.12s  
+  Γ£ô email is not verified with invalid hasΓÇª 0.09s  
+
+   PASS  Tests\Feature\Auth\LoginTest
+  Γ£ô login page is accessible                0.11s  
+  Γ£ô user can login with correct credentialΓÇª 0.08s  
+  Γ£ô user cannot login with wrong password   0.29s  
+  Γ£ô banned user cannot login                0.09s  
+  Γ£ô authenticated user can access dashboarΓÇª 0.11s  
+  Γ£ô guest cannot access dashboard           0.07s  
+  Γ£ô user can logout                         0.07s  
+
+   PASS  Tests\Feature\Auth\PasswordConfirmationTest
+  Γ£ô confirm password screen can be rendereΓÇª 2.21s  
+  Γ£ô password can be confirmed               0.09s  
+  Γ£ô password is not confirmed with invalidΓÇª 0.30s  
+
+   PASS  Tests\Feature\Auth\PasswordResetTest
+  Γ£ô reset password link screen can be rendΓÇª 0.16s  
+  Γ£ô reset password link can be requested    0.43s  
+  Γ£ô reset password screen can be rendered   0.41s  
+  Γ£ô password can be reset with valid token  0.37s  
+
+   PASS  Tests\Feature\Auth\PasswordUpdateTest
+  Γ£ô password can be updated                 0.14s  
+  Γ£ô correct password must be provided to uΓÇª 0.10s  
+
+   PASS  Tests\Feature\Auth\RegistrationTest
+  Γ£ô registration page is accessible         0.13s  
+  Γ£ô a new user can register                 0.10s  
+  Γ£ô first registered user is auto-promotedΓÇª 0.07s  
+  Γ£ô second registered user is NOT promotedΓÇª 0.09s  
+  Γ£ô registration fails with invalid data    0.07s  
+  Γ£ô registration fails with duplicate emaiΓÇª 0.07s  
+
+   PASS  Tests\Feature\BannedMiddlewareTest
+  Γ£ô non-banned user can access authenticatΓÇª 0.10s  
+  Γ£ô banned user is logged out and redirectΓÇª 0.08s  
+  Γ£ô banned user sees error message on rediΓÇª 0.07s  
+  Γ£ô banned user cannot access profile page  0.06s  
+  Γ£ô banned user session is invalidated      0.08s  
+  Γ£ô login page is still accessible for banΓÇª 0.08s  
+
+   PASS  Tests\Feature\ExampleTest
+  Γ£ô it returns a successful response        0.09s  
+
+   PASS  Tests\Feature\ProfileTest
+  Γ£ô profile page is displayed              16.68s  
+  Γ£ô profile information can be updated      0.20s  
+  Γ£ô email verification status is unchangedΓÇª 0.08s  
+  Γ£ô user can delete their account           0.09s  
+  Γ£ô correct password must be provided to dΓÇª 0.08s  
+
+   PASS  Tests\Feature\UserModelTest
+  Γ£ô user has default role of user           0.12s  
+  Γ£ô user has default reputation of 0        0.08s  
+  Γ£ô user is not banned by default           0.10s  
+  Γ£ô isAdmin returns true for admin users    0.11s  
+  Γ£ô isAdmin returns false for regular userΓÇª 0.08s  
+  Γ£ô isBanned returns true when user is banΓÇª 0.09s  
+  Γ£ô isBanned returns false when user is noΓÇª 0.14s  
+  Γ£ô reputation can be incremented           0.07s  
+  Γ£ô reputation can be decremented           0.09s  
+
+  Tests:    55 passed (124 assertions)
+  Duration: 27.30s
+
